@@ -7,7 +7,9 @@ from .form import ContactForm
 
 # Create your views here.
 def contact(request):
+    title = 'Contact'
     form = ContactForm(request.POST or None)
+    confirm_message = None
 
     if form.is_valid():
         print(request.POST)
@@ -18,6 +20,10 @@ def contact(request):
         emailForm = form.cleaned_data['email']
         emailTo = [settings.EMAIL_HOST_USER]
         send_mail(subject, message, emailForm, emailTo, fail_silently=True)
-    context = locals()
+        title = "Thanks!"
+        confirm_message = "Thanks for the message, we will get right back to you!"
+        form = None
+
+    context = {'title':title, 'form':form, 'confirm_message':confirm_message, }
     template = 'contact.html'
     return render(request,template,context)
