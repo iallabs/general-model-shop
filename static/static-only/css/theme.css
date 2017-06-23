@@ -13,6 +13,17 @@ body {
   margin: 5px 0;
 }
 
-.theme-showcase .navbar .container {
+.container theme-showcase {
+  width: auto;
+  height: auto;
+}
+
+.navbar {
+  height: auto;
+  width: auto;
+}
+
+.container {
+  height: auto;
   width: auto;
 }
