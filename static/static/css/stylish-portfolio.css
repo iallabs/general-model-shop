@@ -69,10 +69,10 @@ hr.small {
 
 #sidebar-wrapper {
     z-index: 1000;
-    position: fixed;
+    position: relative;
     right: 0;
-    width: 250px;
-    height: 100%;
+    width: auto;
+    height: auto;
     transform: translateX(250px);
     overflow-y: auto;
     background: #222;
@@ -84,7 +84,7 @@ hr.small {
 }
 
 .sidebar-nav {
-    position: absolute;
+    position: relative;
     top: 0;
     width: 250px;
     margin: 0;
@@ -131,7 +131,7 @@ hr.small {
 
 #menu-toggle {
     z-index: 1;
-    position: fixed;
+    position: relative;
     top: 0;
     right: 0;
 }
@@ -153,14 +153,8 @@ hr.small {
 /* Header */
 
 .header {
-    display: table;
-    position: auto;
-    width: 100%;
-    height: 100%;
-    background: url(../img/bg.png) no-repeat center center scroll;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
+    background: url(../img/bg.png) no-repeat center;
+    background-size:100% 100%;
 }
 
 /* About */
@@ -177,14 +171,15 @@ hr.small {
 
 .service-item {
     display: inline-block;
+    position: : relative;
 }
 
 /* Callout */
 
 .callout {
     display: table;
-    width: 100%;
-    height: 400px;
+    width: auto;
+    height: auto;
     color: #fff;
     background: url(../img/callout.jpg) no-repeat center center scroll;
     -webkit-background-size: cover;
